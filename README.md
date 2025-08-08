@@ -4,6 +4,10 @@ This is a step-by-step guide on how I created a this application based on the pr
 
 ![1754687739954](image/README/1754687739954.png)
 
+# Final result
+
+![1754690204341](image/README/1754690204341.png)
+
 # nstallation & Setup
 
 ## Installation
@@ -22,12 +26,11 @@ npm run dev
 npminstall
 ```
 
-# Create Next.js project
+---
 
 # Make sure Django backend is running on port 8000
 
 pythonmanage.pyrunserver127.0.0.1:8000
-
 
 npxcreate-next-app@latestproducts--typescript--tailwind--eslint--app
 
@@ -119,7 +122,7 @@ Apply database migrations to create the Product model table and start the Django
 
 Create and apply migrations for the Product model, then start the development server to make the API accessible.
 
-## Note
+Note
 
 Create a Python script to automatically load sample product data into the backend API for testing and development purposes.
 
@@ -127,9 +130,27 @@ Create a Python script to automatically load sample product data into the backen
 
 ---
 
+## Front End
+
 ### Overview
 
 The application consists of a Next.js frontend that displays products in a table format with an "Add to cart" functionality and a cart counter.
+
+#### Core Application Files
+
+##### Main Page
+
+* [page.tsx](vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/code/electron-browser/workbench/workbench.html) - Main home page component with state management
+
+##### Components
+
+* [TopPanel.tsx](vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/code/electron-browser/workbench/workbench.html) - Header with "H■ Market" branding
+* [Navigation.tsx](vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/code/electron-browser/workbench/workbench.html) - Navigation bar with Home/Cart and cart counter
+* [ProductTable.tsx](vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/code/electron-browser/workbench/workbench.html) - Product table with Add to Cart functionality
+
+##### API Integration
+
+* [getProducts.js](vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/code/electron-browser/workbench/workbench.html) - Async function to fetch products from Django backend
 
 #### Step 1: Project Setup
 
@@ -181,19 +202,3 @@ Input: Cart counter that shows the number of items added
 [handleAddToCart(productId: number)](vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/code/electron-browser/workbench/workbench.html) | **Purpose** : Handles adding a product to the cart when button is clicked
 
 [fetchProducts()](vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/code/electron-browser/workbench/workbench.html) (inside useEffect) | **Purpose** : Fetches products from the backend API when component loads
-
-## File Structure
-
-frontend/products/
-├── app/
- │   ├── actions/
- │    │   └── getProducts.js
- │   └── page.tsx
-└── components/
-    ├── TopPanel.tsx
-    ├── Navigation.tsx
-    └── ProductTable.tsx
-
-# Final result
-
-![1754688683753](image/README/1754688683753.png)
