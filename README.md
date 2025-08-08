@@ -10,6 +10,8 @@ This is a step-by-step guide on how I created a this application based on the pr
 
 # Video
 
+This video demonstrates a full-stack web application built with React (Next.js) frontend and Django REST Framework backend, showcasing real-time data fetching from the Django server and dynamic state updates in the React application.
+
 https://github.com/user-attachments/assets/342cbdf4-e437-4483-9d49-1e4456c37a98
 
 
