@@ -8,6 +8,11 @@ This is a step-by-step guide on how I created a this application based on the pr
 
 ![1754690204341](image/README/1754690204341.png)
 
+# Video
+
+https://github.com/user-attachments/assets/342cbdf4-e437-4483-9d49-1e4456c37a98
+
+
 # nstallation & Setup
 
 ## Installation
