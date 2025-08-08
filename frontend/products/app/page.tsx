@@ -21,8 +21,6 @@ export default function Home() {
   const [products, setProducts] = useState<Product[]>([]);
   // State to hold the list of selected products added to the cart
   const [selectedProductList, setSelectedProductList] = useState<Product[]>([]);
-  // State to manage loading state
-  const [loading, setLoading] = useState(true);
 
   // Function to handle adding a product to the cart
   const handleAddToCart = (productId: number) => {
