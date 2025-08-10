@@ -14,7 +14,7 @@ This video demonstrates a full-stack web application built with React (Next.js) 
 
 https://github.com/user-attachments/assets/342cbdf4-e437-4483-9d49-1e4456c37a98
 
-# nstallation & Setup
+# Installation & Setup
 
 ## Installation
 
@@ -34,7 +34,7 @@ npminstall
 
 ---
 
-# Make sure Django backend is running on port 8000
+###### Make sure Django backend is running on port 8000
 
 pythonmanage.pyrunserver127.0.0.1:8000
 
@@ -44,7 +44,7 @@ cdproducts
 
 npminstall
 
-## Backend
+# Backend
 
 ### Technology Stack
 
@@ -57,6 +57,8 @@ npminstall
 -**CORS**: django-cors-headers
 
 -**Language**: Python 3.13
+
+## **Backend Project Setup and Structure**
 
 ### Step 1: Creating Models
 
@@ -136,15 +138,15 @@ Create a Python script to automatically load sample product data into the backen
 
 ---
 
-## Front End
+# Front End
 
-### Overview
+## Overview
 
 The application consists of a Next.js frontend that displays products in a table format with an "Add to cart" functionality and a cart counter.
 
 #### Core Application Files
 
-##### Main Page
+## Main Page
 
 * [page.tsx](vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/code/electron-browser/workbench/workbench.html) - Main home page component with state management
 
@@ -157,6 +159,9 @@ The application consists of a Next.js frontend that displays products in a table
 ##### API Integration
 
 * [getProducts.js](vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/code/electron-browser/workbench/workbench.html) - Async function to fetch products from Django backend
+
+
+## Front End Project Setup and Structure
 
 #### Step 1: Project Setup
 
