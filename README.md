@@ -214,48 +214,4 @@ Input: Cart counter that shows the number of items added
 
 [fetchProducts()](vscode-file://vscode-app/Applications/Visual%20Studio%20Code.app/Contents/Resources/app/out/vs/code/electron-browser/workbench/workbench.html) (inside useEffect) | **Purpose** : Fetches products from the backend API when component loads
 
-# Note
 
-Here is the main logic code that runs from page.tsx that I was describing during the interview. The application works as follows:
-
-1. **Data Fetching** : The `useEffect` hook fetches product data and stores it in the `products` state variable.
-2. **Product Display** : The list of products is mapped and rendered in the `ProductTable` component.
-3. **Cart Functionality** : The `handleAddToCart` function is passed as a prop to the `ProductTable` component. When a user selects products, this function stores the selected items in the `selectedProductList` and updates the `cartCount` based on the number of selected products."
-
-```
-  // State to manage cart count, products, selected product list, and loading state
-  const [cartCount, setCartCount] = useState(0);
-  // State to hold the list of products fetched from the API
-  const [products, setProducts] = useState<Product[]>([]);
-  // State to hold the list of selected products added to the cart
-  const [selectedProductList, setSelectedProductList] = useState<Product[]>([]);
-
-  // Function to handle adding a product to the cart
-  const handleAddToCart = (productId: number) => {
-    console.log(`Adding product ${productId} to cart`);
-    // Copy the selected product to to the selectedProductList
-    const selectedProduct = products.find(product => product.id === productId);
-    if (selectedProduct) {
-      setSelectedProductList(prevList => [...prevList, selectedProduct]);
-      // set the cart count based on the selected product based on the selectedProductList count
-      setCartCount(selectedProductList.length);
-    }
-
-  }
-
-    // Fetch products on component mount
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const fetchedProducts = await getProducts();
-        console.log('Fetched products:', fetchedProducts);
-        setProducts(fetchedProducts);
-      } catch (error) {
-        console.error('Failed to fetch products:', error);
-      } finally {
-      }
-    };
-
-    fetchProducts();
-  }, []);
-```
